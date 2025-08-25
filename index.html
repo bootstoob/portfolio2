@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia de Marketing y Soluciones Digitales</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Animaciones */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .servicio-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .servicio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        .btn {
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+        }
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        /* Servicios */
+        .servicios {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+        .servicios h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2rem;
+        }
+        .servicios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .servicio-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .servicio-card h3 {
+            margin-bottom: 15px;
+            color: #3498db;
+        }
+        /* Por qué elegirnos */
+        .elegirnos {
+            padding: 80px 0;
+        }
+        .elegirnos h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2rem;
+        }
+        .razones {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .razon {
+            text-align: center;
+            padding: 20px;
+        }
+        .razon i {
+            font-size: 2.5rem;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+        /* Contacto */
+        .contacto {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .contacto h2 {
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+        .formulario {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .formulario input,
+        .formulario textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            transition: border 0.3s ease;
+        }
+        .formulario input:focus,
+        .formulario textarea:focus {
+            border: 2px solid #3498db;
+        }
+        .formulario textarea {
+            height: 120px;
+        }
+        /* Footer */
+        .footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero fade-in visible">
+        <div class="container">
+            <h1 class="fade-in visible">Transformamos tu negocio con soluciones digitales innovadoras</h1>
+            <p class="fade-in visible">Agencia de marketing, asesoramiento tecnológico y automatización. Experiencia y tecnología al servicio de tu crecimiento.</p>
+            <a href="#contacto" class="btn fade-in visible">Hablemos de tu proyecto</a>
+        </div>
+    </section>
+
+    <!-- Quiénes Somos -->
+    <section class="container fade-in" style="padding: 80px 0; text-align: center;">
+        <h2 class="fade-in">Experiencia y tecnología en un solo equipo</h2>
+        <p class="fade-in">Somos un equipo multidisciplinar que combina años de experiencia en marketing y tecnología con las últimas tendencias. Ayudamos a empresas a digitalizarse, automatizar procesos y alcanzar sus objetivos con soluciones a medida.</p>
+    </section>
+
+    <!-- Servicios -->
+    <section class="servicios">
+        <div class="container">
+            <h2 class="fade-in">Nuestros servicios</h2>
+            <div class="servicios-grid">
+                <div class="servicio-card fade-in">
+                    <h3>Marketing Digital</h3>
+                    <p>Estrategias personalizadas para aumentar tu visibilidad y conversiones.</p>
+                </div>
+                <div class="servicio-card fade-in">
+                    <h3>Asesoramiento Tecnológico</h3>
+                    <p>Soluciones tecnológicas adaptadas a tus necesidades.</p>
+                </div>
+                <div class="servicio-card fade-in">
+                    <h3>Digitalización</h3>
+                    <p>Transformamos procesos tradicionales en digitales para optimizar tu negocio.</p>
+                </div>
+                <div class="servicio-card fade-in">
+                    <h3>Automatización</h3>
+                    <p>Ahorra tiempo y recursos con herramientas de automatización.</p>
+                </div>
+                <div class="servicio-card fade-in">
+                    <h3>Soluciones Digitales</h3>
+                    <p>Desarrollo de plataformas, apps y herramientas a medida.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Por qué Elegirnos -->
+    <section class="elegirnos">
+        <div class="container">
+            <h2 class="fade-in">¿Por qué trabajar con nosotros?</h2>
+            <div class="razones">
+                <div class="razon fade-in">
+                    <i>💼</i>
+                    <h3>Experiencia</h3>
+                    <p>Equipo con años de trayectoria en sectores clave.</p>
+                </div>
+                <div class="razon fade-in">
+                    <i>💡</i>
+                    <h3>Innovación</h3>
+                    <p>Utilizamos las últimas tecnologías y tendencias.</p>
+                </div>
+                <div class="razon fade-in">
+                    <i>🎯</i>
+                    <h3>Enfoque personalizado</h3>
+                    <p>Soluciones adaptadas a cada cliente.</p>
+                </div>
+                <div class="razon fade-in">
+                    <i>📈</i>
+                    <h3>Resultados</h3>
+                    <p>Nos enfocamos en generar impacto real en tu negocio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <h2 class="fade-in">¿Listo para transformar tu negocio?</h2>
+            <form class="formulario fade-in">
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Teléfono">
+                <textarea placeholder="Cuéntanos sobre tu proyecto" required></textarea>
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Agencia de Marketing y Soluciones Digitales. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Animación al hacer scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeIns = document.querySelectorAll('.fade-in');
+
+            const appearOptions = {
+                threshold: 0.2,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    } else {
+                        entry.target.classList.add('visible');
+                        appearOnScroll.unobserve(entry.target);
+                    }
+                });
+            }, appearOptions);
+
+            fadeIns.forEach(fadeIn => {
+                appearOnScroll.observe(fadeIn);
+            });
+        });
+    </script>
+</body>
+</html>
